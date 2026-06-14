@@ -13,7 +13,6 @@ An enterprise-grade **Agentic RAG (Retrieval-Augmented Generation)** application
 ---
 
 ## System Architecture
-
 ```text
     ┌──────────────────────────────┐
     │  Unstructured Document Input │ (PDF, TXT, MD, Images via Tesseract OCR)
@@ -50,10 +49,11 @@ An enterprise-grade **Agentic RAG (Retrieval-Augmented Generation)** application
     ┌──────────────────────────────┐
     │  Streamlit Cloud Dashboard   │ (Live Interactive Flagging Interface)
     └──────────────────────────────┘
-
+```
 
 ## Project Repository Anatomy
 
+```text
 ├── app.py                     # Streamlit frontend application dashboard
 ├── requirements.txt           # Explicit Python system dependencies
 ├── packages.txt               # Linux system binaries for OCR and PDF rendering on HF Cloud
@@ -75,3 +75,60 @@ An enterprise-grade **Agentic RAG (Retrieval-Augmented Generation)** application
 └── evals/                     # Pipeline assessment frameworks
     └── evaluate_rag.py        # Automated validation framework for benchmarking
 
+```
+
+## Quick Start Local Configuration
+- **Initialize Virtual Environment & System Requirements**
+Execute the following steps inside your terminal to safely provision the background environment variables:
+
+# Clone or move into the project directory
+cd project-directory-path
+
+# Create and trigger the virtual python sandbox
+python -m venv .venv
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+
+# Install exact lock dependencies
+pip install -r requirements.txt
+
+-**Manage API Passwords**
+Duplicate the sample environment blueprint file and append your private keys safely:
+
+copy .env.example .env
+
+Open your newly populated .env file and verify your tokens are cleanly registered:
+
+GROQ_API_KEY=gsk_your_actual_private_groq_key_here
+GROQ_MODEL=llama3-70b-8192
+
+-**Initialize The Application UI**
+Launch the native web interface server locally on your browser:
+
+streamlit run app.py
+
+Your console will output your local instance routing connection, typically loaded at: http://localhost:8501
+
+-**Pipeline Diagnostics & Quality Testing**
+To execute an automated quality check run on the underlying retriever mechanisms against standard target checklists, execute the evaluation script directly:
+
+python evals/evaluate_rag.py samples/sample_insurance_policy.txt insurance
+
+The system will parse your target documentation asset, run real-time multi-agent queries, cross-verify compliance criteria arrays dynamically, and dump an immutable structured JSON log mapping correctness data metrics.
+
+-**Cloud Infrastructure Deployment (Hugging Face Spaces)**
+
+This project is configured out-of-the-box to run directly on secure container infrastructure tiers:
+
+Initialize a new Space on the Hugging Face hub selecting Streamlit as the baseline application SDK.
+
+Commit your source directories (src/, data/, evals/, samples/) alongside root control configurations (app.py, requirements.txt, packages.txt).
+
+Move to the Spaces Settings UI, expand the Variables and secrets component, and append your production variables:
+
+GROQ_API_KEY = gsk_...
+
+GROQ_MODEL = llama3-70b-8192
+
+The system builder reads packages.txt to safely provision OCR (tesseract-ocr) and file stream binaries (poppler-utils) automatically.
+
+Disclaimer: This repository is developed entirely as a technical portfolio engineering project. The calculations and insights rendered do not constitute binding financial, legal, medical, or corporate compliance advice.
