@@ -82,13 +82,16 @@ An enterprise-grade **Agentic RAG (Retrieval-Augmented Generation)** application
 Execute the following steps inside your terminal to safely provision the background environment variables:
 
 - **Clone or move into the project directory**
+
 cd project-directory-path
 
 - **Create and trigger the virtual python sandbox**
+
 python -m venv .venv
 source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 
 - **Install exact lock dependencies**
+
 pip install -r requirements.txt
 
 # Manage API Passwords
@@ -118,7 +121,7 @@ The system will parse your target documentation asset, run real-time multi-agent
 
 # Cloud Infrastructure Deployment (Hugging Face Spaces)
 
-This project is configured out-of-the-box to run directly on secure container infrastructure tiers:
+This project is configured out of the box to run directly on secure container infrastructure tiers:
 
 Initialize a new Space on the Hugging Face hub selecting Streamlit as the baseline application SDK.
 
