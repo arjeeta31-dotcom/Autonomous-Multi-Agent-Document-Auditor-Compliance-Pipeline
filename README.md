@@ -91,31 +91,31 @@ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 # Install exact lock dependencies
 pip install -r requirements.txt
 
--**Manage API Passwords**
-Duplicate the sample environment blueprint file and append your private keys safely:
+- **Manage API Passwords**
+# Duplicate the sample environment blueprint file and append your private keys safely:
 
 copy .env.example .env
 
-Open your newly populated .env file and verify your tokens are cleanly registered:
+# Open your newly populated .env file and verify your tokens are cleanly registered:
 
 GROQ_API_KEY=gsk_your_actual_private_groq_key_here
 GROQ_MODEL=llama3-70b-8192
 
--**Initialize The Application UI**
-Launch the native web interface server locally on your browser:
+- **Initialize The Application UI**
+# Launch the native web interface server locally on your browser:
 
 streamlit run app.py
 
 Your console will output your local instance routing connection, typically loaded at: http://localhost:8501
 
--**Pipeline Diagnostics & Quality Testing**
-To execute an automated quality check run on the underlying retriever mechanisms against standard target checklists, execute the evaluation script directly:
+- **Pipeline Diagnostics & Quality Testing**
+# To execute an automated quality check run on the underlying retriever mechanisms against standard target checklists, execute the evaluation script directly:
 
 python evals/evaluate_rag.py samples/sample_insurance_policy.txt insurance
 
 The system will parse your target documentation asset, run real-time multi-agent queries, cross-verify compliance criteria arrays dynamically, and dump an immutable structured JSON log mapping correctness data metrics.
 
--**Cloud Infrastructure Deployment (Hugging Face Spaces)**
+- **Cloud Infrastructure Deployment (Hugging Face Spaces)**
 
 This project is configured out-of-the-box to run directly on secure container infrastructure tiers:
 
