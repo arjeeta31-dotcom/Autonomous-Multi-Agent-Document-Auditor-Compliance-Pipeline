@@ -1,0 +1,28 @@
+Health Insurance Policy Document
+
+Policyholder Name: Aarav Mehta
+Policy Number: HLT-2026-88421
+
+Coverage
+Start Date: 2026-01-01
+End Date: 2049-99-99
+Sum Insured: INR 500,000
+
+Premium
+Base Premium: INR 12,000
+GST: INR 2,160
+Processing Fee: INR 500
+Total Premium: INR 20,000
+
+Deductible
+Annual deductible: INR 25,000
+
+Exclusions
+Cosmetic surgery is excluded unless medically necessary. Dental treatment is excluded unless caused by accidental injury.
+
+Claims
+The insured person should contact customer support for claim assistance.
+
+Signature
+Authorized Signatory
+
